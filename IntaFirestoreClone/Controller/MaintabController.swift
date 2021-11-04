@@ -1,13 +1,11 @@
 import UIKit
 
-class ViewController: UIViewController {
-
+class MainTabController: UITabBarController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        view.backgroundColor = .brown
+        view.backgroundColor = .darkGray
     }
-
 }
 

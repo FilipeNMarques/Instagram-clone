@@ -13,6 +13,7 @@
 		B77F739527348CA400400ECC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B77F739327348CA400400ECC /* Main.storyboard */; };
 		B77F739727348CA600400ECC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B77F739627348CA600400ECC /* Assets.xcassets */; };
 		B77F739A27348CA600400ECC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B77F739827348CA600400ECC /* LaunchScreen.storyboard */; };
+		B77F73A827348D9600400ECC /* MaintabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77F73A727348D9600400ECC /* MaintabController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B77F739627348CA600400ECC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B77F739927348CA600400ECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B77F739B27348CA600400ECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B77F73A727348D9600400ECC /* MaintabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintabController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,12 @@
 		B77F738C27348CA400400ECC /* IntaFirestoreClone */ = {
 			isa = PBXGroup;
 			children = (
+				B77F73A627348D0400400ECC /* Model */,
+				B77F73A527348D0100400ECC /* View */,
+				B77F73A427348CFE00400ECC /* ViewModel */,
+				B77F73A327348CFB00400ECC /* Controller */,
+				B77F73A227348CF900400ECC /* API */,
+				B77F73A127348CF400400ECC /* Utils */,
 				B77F738D27348CA400400ECC /* AppDelegate.swift */,
 				B77F738F27348CA400400ECC /* SceneDelegate.swift */,
 				B77F739127348CA400400ECC /* ViewController.swift */,
@@ -65,6 +73,49 @@
 				B77F739B27348CA600400ECC /* Info.plist */,
 			);
 			path = IntaFirestoreClone;
+			sourceTree = "<group>";
+		};
+		B77F73A127348CF400400ECC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B77F73A227348CF900400ECC /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		B77F73A327348CFB00400ECC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B77F73A727348D9600400ECC /* MaintabController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B77F73A427348CFE00400ECC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B77F73A527348D0100400ECC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B77F73A627348D0400400ECC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +191,7 @@
 			files = (
 				B77F739227348CA400400ECC /* ViewController.swift in Sources */,
 				B77F738E27348CA400400ECC /* AppDelegate.swift in Sources */,
+				B77F73A827348D9600400ECC /* MaintabController.swift in Sources */,
 				B77F739027348CA400400ECC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
