@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B73CD7A52735C5E200845682 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73CD7A42735C5E200845682 /* FeedCell.swift */; };
+		B73CD7A72735C71D00845682 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73CD7A62735C71D00845682 /* Extensions.swift */; };
 		B77F738E27348CA400400ECC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77F738D27348CA400400ECC /* AppDelegate.swift */; };
 		B77F739027348CA400400ECC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77F738F27348CA400400ECC /* SceneDelegate.swift */; };
 		B77F739227348CA400400ECC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77F739127348CA400400ECC /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B73CD7A42735C5E200845682 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		B73CD7A62735C71D00845682 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B77F738A27348CA400400ECC /* IntaFirestoreClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntaFirestoreClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B77F738D27348CA400400ECC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B77F738F27348CA400400ECC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 		B77F73A127348CF400400ECC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B73CD7A62735C71D00845682 /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 		B77F73A527348D0100400ECC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B73CD7A42735C5E200845682 /* FeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B77F739227348CA400400ECC /* ViewController.swift in Sources */,
+				B73CD7A52735C5E200845682 /* FeedCell.swift in Sources */,
 				B7B6275D2735A68D00BB0E1D /* ImageSelectorController.swift in Sources */,
 				B7B6275F2735A69700BB0E1D /* NotificationController.swift in Sources */,
 				B7B6275B2735A68000BB0E1D /* SearchController.swift in Sources */,
@@ -212,6 +219,7 @@
 				B7B627612735A6A200BB0E1D /* ProfileController.swift in Sources */,
 				B7B627592735A5DE00BB0E1D /* FeedController.swift in Sources */,
 				B77F73A827348D9600400ECC /* MaintabController.swift in Sources */,
+				B73CD7A72735C71D00845682 /* Extensions.swift in Sources */,
 				B77F739027348CA400400ECC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
