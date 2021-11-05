@@ -12,12 +12,13 @@ class MainTabController: UITabBarController {
     //    MARK: - Helpers
     
     func configureViewControllers() {
-        
+        view.backgroundColor = .white
         
         tabBar.scrollEdgeAppearance = tabBar.standardAppearance
         tabBar.tintColor = .black
         
-        let feed = templateNavigationController(unselectedImage: "home_unselected", selectedImage: "home_selected", rootViewControler: FeedController())
+        let layout = UICollectionViewFlowLayout()
+        let feed = templateNavigationController(unselectedImage: "home_unselected", selectedImage: "home_selected", rootViewControler: FeedController(collectionViewLayout: layout))
         
         let search = templateNavigationController(unselectedImage: "search_unselected", selectedImage: "search_selected", rootViewControler: SearchController())
         
@@ -36,6 +37,7 @@ class MainTabController: UITabBarController {
         nav.tabBarItem.image = UIImage(named: unselectedImage)
         nav.tabBarItem.selectedImage = UIImage(named: selectedImage)
         nav.navigationBar.tintColor = .black
+        nav.navigationBar.barTintColor = .white
         
         return nav
     }
