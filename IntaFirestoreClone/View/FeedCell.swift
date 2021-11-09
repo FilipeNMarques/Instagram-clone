@@ -54,9 +54,7 @@ class FeedCell: UICollectionViewCell {
         actionButtonsStackView.anchor(top: postImageView.bottomAnchor, width: 120, height: 50)
         
         likesLabel.anchor(top: likeButton.bottomAnchor, left: leftAnchor, paddingTop: -4, paddingLeft: 8)
-        
         captionLabel.anchor(top: likesLabel.bottomAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 8)
-        
         postTimeLabel.anchor(top: captionLabel.bottomAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 8)
         
         NSLayoutConstraint.activate([
