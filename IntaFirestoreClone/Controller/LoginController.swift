@@ -101,13 +101,7 @@ class LoginController: UIViewController {
     private func makeLabelButton(normaltext: String = "Don't have an account? ", boldtext: String = "Sign Up", fontSize: CGFloat = 16) -> UIButton {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        let atts: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.7), .font: UIFont.systemFont(ofSize: fontSize)]
-        let attributedTitle = NSMutableAttributedString(string: "\(normaltext)  ", attributes: atts)
-        
-        let boldAtts : [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.7), .font: UIFont.boldSystemFont(ofSize: fontSize)]
-        attributedTitle.append(NSAttributedString(string: boldtext, attributes: boldAtts))
-        
-        button.setAttributedTitle(attributedTitle, for: .normal)
+        button.attributedTitle(normalText: normaltext, boldText: boldtext, fontSize: fontSize)
         
         return button
     }
