@@ -21,7 +21,14 @@ class LoginController: UIViewController {
         setupUI()
         setupConstraints()
     }
-
+    
+    //    MARK: - Actions
+    @objc func handleShowSingUp() {
+        let controller = RegistrationController()
+        navigationController?.pushViewController(controller, animated: true)
+        
+    }
+    
     //    MARK: - SetupUI
     private func setupUI() {
         makeGradient()
@@ -30,7 +37,7 @@ class LoginController: UIViewController {
         view.addSubview(dontHaveAccountButton)
         
     }
-
+    
     //    MARK: - Setup constraints
     
     private func setupConstraints() {
@@ -46,20 +53,20 @@ class LoginController: UIViewController {
             
             dontHaveAccountButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             dontHaveAccountButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
-        
+            
         ])
     }
-
+    
     //    MARK: - Helpers
     
     func setupNavigationController() {
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.barStyle = .black
-    
+        
     }
-
+    
     //    MARK: - Makers
-
+    
     private func makeInputStackView() -> UIStackView {
         let stackView = UIStackView(arrangedSubviews: [emailTextField, passwordTextField, loginButton, forgetPasswordButton])
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -68,7 +75,7 @@ class LoginController: UIViewController {
         
         return stackView
     }
-
+    
     private func makeImageView() -> UIImageView {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -77,7 +84,7 @@ class LoginController: UIViewController {
         
         return image
     }
-
+    
     private func makeGradient() {
         let gradient = CAGradientLayer()
         gradient.colors = [UIColor.systemPurple.cgColor, UIColor.systemBlue.cgColor]
@@ -85,7 +92,7 @@ class LoginController: UIViewController {
         gradient.frame = view.frame
         view.layer.addSublayer(gradient)
     }
-
+    
     private func makeLoginButton() -> UIButton {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -97,13 +104,13 @@ class LoginController: UIViewController {
         
         return button
     }
-
+    
     private func makeLabelButton(normaltext: String = "Don't have an account? ", boldtext: String = "Sign Up", fontSize: CGFloat = 16) -> UIButton {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.attributedTitle(normalText: normaltext, boldText: boldtext, fontSize: fontSize)
-        
+        button.addTarget(self, action: #selector(handleShowSingUp), for: .touchUpInside)
         return button
     }
-
+    
 }
