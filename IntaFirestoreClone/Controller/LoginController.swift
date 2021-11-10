@@ -1,27 +1,27 @@
 import UIKit
 
 class LoginController: UIViewController {
-    
-    
+
+
     //    MARK: - Properties
-    
+
     lazy var instaLogo = makeImageView()
-    lazy var emailTextField = makeTextField(keyboardType: .emailAddress, placeholder: "Your e-mail")
-    lazy var passwordTextField = makeTextField(keyboardType: .default, placeholder: "Your password", isPassword: true)
+    lazy var emailTextField = CustomTextField(placeholder: "Your e-mail", keyboardType: .emailAddress)
+    lazy var passwordTextField = CustomTextField(placeholder: "Your password", isPassword: true, keyboardType: .default)
     lazy var loginButton = makeLoginButton()
     lazy var inputStackView = makeInputStackView()
     lazy var dontHaveAccountButton = makeLabelButton()
     lazy var forgetPasswordButton = makeLabelButton(normaltext: "Forget your password?", boldtext: "Get help signing in", fontSize: 13)
-    
+
     //    MARK: - Lifecycle
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationController()
         setupUI()
         setupConstraints()
     }
-    
+
     //    MARK: - SetupUI
     private func setupUI() {
         makeGradient()
@@ -30,7 +30,7 @@ class LoginController: UIViewController {
         view.addSubview(dontHaveAccountButton)
         
     }
-    
+
     //    MARK: - Setup constraints
     
     private func setupConstraints() {
@@ -49,17 +49,17 @@ class LoginController: UIViewController {
         
         ])
     }
-    
+
     //    MARK: - Helpers
     
     func setupNavigationController() {
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.barStyle = .black
-        
+    
     }
-    
+
     //    MARK: - Makers
-    
+
     private func makeInputStackView() -> UIStackView {
         let stackView = UIStackView(arrangedSubviews: [emailTextField, passwordTextField, loginButton, forgetPasswordButton])
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -68,7 +68,7 @@ class LoginController: UIViewController {
         
         return stackView
     }
-    
+
     private func makeImageView() -> UIImageView {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -77,7 +77,7 @@ class LoginController: UIViewController {
         
         return image
     }
-    
+
     private func makeGradient() {
         let gradient = CAGradientLayer()
         gradient.colors = [UIColor.systemPurple.cgColor, UIColor.systemBlue.cgColor]
@@ -85,22 +85,7 @@ class LoginController: UIViewController {
         gradient.frame = view.frame
         view.layer.addSublayer(gradient)
     }
-    
-    private func makeTextField(keyboardType: UIKeyboardType, placeholder: String, isPassword: Bool = false) -> UITextField {
-        let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.borderStyle = .none
-        textField.textColor = .white
-        textField.keyboardAppearance = .dark
-        textField.backgroundColor = UIColor(white: 1, alpha: 0.1)
-        textField.setHeight(45)
-        textField.keyboardType  = keyboardType
-        textField.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.7)])
-        textField.isSecureTextEntry = isPassword == true ? true : false
-        
-        return textField
-    }
-    
+
     private func makeLoginButton() -> UIButton {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -112,7 +97,7 @@ class LoginController: UIViewController {
         
         return button
     }
-    
+
     private func makeLabelButton(normaltext: String = "Don't have an account? ", boldtext: String = "Sign Up", fontSize: CGFloat = 16) -> UIButton {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false

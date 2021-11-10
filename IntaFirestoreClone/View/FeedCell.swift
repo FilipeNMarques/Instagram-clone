@@ -16,7 +16,6 @@ class FeedCell: UICollectionViewCell {
     lazy var captionLabel = makePostLabels(labelText: "Some text about this photo", fontTypeAndSize: UIFont.systemFont(ofSize: 14))
     lazy var postTimeLabel = makePostLabels(labelText: "2 days ago", fontColor: .lightGray)
     
-    
 //    MARK: - Lifecycle
     
     override init(frame: CGRect) {
@@ -42,6 +41,8 @@ class FeedCell: UICollectionViewCell {
         
     }
     
+    //    MARK: - Setupcontraints
+    
     func configureConstraints() {
         profileImage.anchor(top: topAnchor, left: leftAnchor, paddingTop: 12, paddingLeft: 12)
         profileImage.setDimensions(height: 40, width: 40)
@@ -63,6 +64,7 @@ class FeedCell: UICollectionViewCell {
     }
     
 //    MARK: - Actions
+    
     @objc func didTapUsername() {
         debugPrint("Did tap username button")
     }
