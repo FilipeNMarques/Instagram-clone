@@ -84,15 +84,7 @@ class LoginController: UIViewController {
         
         return image
     }
-    
-    private func makeGradient() {
-        let gradient = CAGradientLayer()
-        gradient.colors = [UIColor.systemPurple.cgColor, UIColor.systemBlue.cgColor]
-        gradient.locations = [0, 1]
-        gradient.frame = view.frame
-        view.layer.addSublayer(gradient)
-    }
-    
+     
     private func makeLoginButton() -> UIButton {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
