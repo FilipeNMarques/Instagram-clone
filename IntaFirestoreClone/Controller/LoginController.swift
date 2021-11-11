@@ -10,23 +10,31 @@ class LoginController: UIViewController {
     lazy var passwordTextField = CustomTextField(placeholder: "Your password", isPassword: true, keyboardType: .default)
     lazy var loginButton = makeLoginButton()
     lazy var inputStackView = makeInputStackView()
-    lazy var dontHaveAccountButton = makeLabelButton()
-    lazy var forgetPasswordButton = makeLabelButton(normaltext: "Forget your password?", boldtext: "Get help signing in", fontSize: 13)
-
+    lazy var dontHaveAccountButton = makeDonthaveAccountLabelButton()
+    lazy var forgetPasswordButton = makeForgetPasswordLabelButton()
+    
     //    MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationController()
+        configNavigationController()
         setupUI()
         setupConstraints()
     }
     
     //    MARK: - Actions
+    
     @objc func handleShowSingUp() {
         let controller = RegistrationController()
         navigationController?.pushViewController(controller, animated: true)
-        
+    }
+    
+    @objc func handleLoginButton() {
+         debugPrint("Hello")
+     }
+    
+    @objc func handleForgetPassword() {
+        debugPrint("Forget password button pressed")
     }
     
     //    MARK: - SetupUI
@@ -59,7 +67,7 @@ class LoginController: UIViewController {
     
     //    MARK: - Helpers
     
-    func setupNavigationController() {
+    func configNavigationController() {
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.barStyle = .black
         
@@ -85,23 +93,24 @@ class LoginController: UIViewController {
         return image
     }
      
-    private func makeLoginButton() -> UIButton {
-        let button = UIButton(type: .system)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Login In", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .systemPurple
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-        button.setHeight(45)
+    private func makeLoginButton() -> CustomAuthButton {
+        let button = CustomAuthButton(title: "Login In")
+        button.addTarget(self, action: #selector(handleLoginButton), for: .touchUpInside)
         
         return button
     }
     
-    private func makeLabelButton(normaltext: String = "Don't have an account? ", boldtext: String = "Sign Up", fontSize: CGFloat = 16) -> UIButton {
-        let button = UIButton(type: .system)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.attributedTitle(normalText: normaltext, boldText: boldtext, fontSize: fontSize)
+    private func makeDonthaveAccountLabelButton() -> CustomTwoLabelButton {
+        let button = CustomTwoLabelButton(normalText: "Don't have an account? ", boldText: "Sign Up", fontSize: 13)
         button.addTarget(self, action: #selector(handleShowSingUp), for: .touchUpInside)
+        
+        return button
+    }
+    
+    private func makeForgetPasswordLabelButton() -> CustomTwoLabelButton {
+        let button = CustomTwoLabelButton(normalText: "Forget your password?", boldText: "Get help signing in", fontSize: 13)
+        button.addTarget(self, action: #selector(handleForgetPassword), for: .touchUpInside)
+        
         return button
     }
     
