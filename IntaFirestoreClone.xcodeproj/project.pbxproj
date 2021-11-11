@@ -27,8 +27,8 @@
 		B7B627612735A6A200BB0E1D /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B627602735A6A200BB0E1D /* ProfileController.swift */; };
 		B7D648DD273ADBFB001C5D72 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D648DC273ADBFB001C5D72 /* LoginController.swift */; };
 		B7D648DF273ADC04001C5D72 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D648DE273ADC04001C5D72 /* RegistrationController.swift */; };
-		B7FA4524273D5E8400F2FA21 /* CustomAuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA4523273D5E8400F2FA21 /* CustomAuthButton.swift */; };
-		B7FA4526273D68DE00F2FA21 /* CustomLabelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA4525273D68DE00F2FA21 /* CustomLabelButton.swift */; };
+		B7FA4529273DB27500F2FA21 /* CustomTwoLabelsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA4528273DB27500F2FA21 /* CustomTwoLabelsButton.swift */; };
+		B7FA452B273DB97D00F2FA21 /* CustomAuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA452A273DB97D00F2FA21 /* CustomAuthButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,8 +54,8 @@
 		B7B627602735A6A200BB0E1D /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		B7D648DC273ADBFB001C5D72 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		B7D648DE273ADC04001C5D72 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
-		B7FA4523273D5E8400F2FA21 /* CustomAuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAuthButton.swift; sourceTree = "<group>"; };
-		B7FA4525273D68DE00F2FA21 /* CustomLabelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabelButton.swift; sourceTree = "<group>"; };
+		B7FA4528273DB27500F2FA21 /* CustomTwoLabelsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTwoLabelsButton.swift; sourceTree = "<group>"; };
+		B7FA452A273DB97D00F2FA21 /* CustomAuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAuthButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,8 +157,6 @@
 			children = (
 				B73CD7A42735C5E200845682 /* FeedCell.swift */,
 				B71AABEC273C332C009FDF0E /* CustomTextField.swift */,
-				B7FA4525273D68DE00F2FA21 /* CustomLabelButton.swift */,
-				B7FA4523273D5E8400F2FA21 /* CustomAuthButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,10 +171,20 @@
 		B7D648DB273ADBD7001C5D72 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				B7FA4527273DB24800F2FA21 /* MakerFunctions */,
 				B7D648DC273ADBFB001C5D72 /* LoginController.swift */,
 				B7D648DE273ADC04001C5D72 /* RegistrationController.swift */,
 			);
 			name = Authentication;
+			sourceTree = "<group>";
+		};
+		B7FA4527273DB24800F2FA21 /* MakerFunctions */ = {
+			isa = PBXGroup;
+			children = (
+				B7FA4528273DB27500F2FA21 /* CustomTwoLabelsButton.swift */,
+				B7FA452A273DB97D00F2FA21 /* CustomAuthButton.swift */,
+			);
+			name = MakerFunctions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,13 +260,14 @@
 			files = (
 				B71AABED273C332C009FDF0E /* CustomTextField.swift in Sources */,
 				B77F739227348CA400400ECC /* ViewController.swift in Sources */,
+				B7FA4529273DB27500F2FA21 /* CustomTwoLabelsButton.swift in Sources */,
 				B7D648DD273ADBFB001C5D72 /* LoginController.swift in Sources */,
 				B71AABF2273C3B7A009FDF0E /* UIButton.swift in Sources */,
 				B73CD7A52735C5E200845682 /* FeedCell.swift in Sources */,
+				B7FA452B273DB97D00F2FA21 /* CustomAuthButton.swift in Sources */,
 				B7B6275D2735A68D00BB0E1D /* ImageSelectorController.swift in Sources */,
 				B7B6275F2735A69700BB0E1D /* NotificationController.swift in Sources */,
 				B7B6275B2735A68000BB0E1D /* SearchController.swift in Sources */,
-				B7FA4526273D68DE00F2FA21 /* CustomLabelButton.swift in Sources */,
 				B71AABF4273C40D4009FDF0E /* UIViewController.swift in Sources */,
 				B77F738E27348CA400400ECC /* AppDelegate.swift in Sources */,
 				B7B627612735A6A200BB0E1D /* ProfileController.swift in Sources */,
@@ -267,7 +276,6 @@
 				B77F73A827348D9600400ECC /* MaintabController.swift in Sources */,
 				B73CD7A72735C71D00845682 /* Extensions.swift in Sources */,
 				B77F739027348CA400400ECC /* SceneDelegate.swift in Sources */,
-				B7FA4524273D5E8400F2FA21 /* CustomAuthButton.swift in Sources */,
 				B7D648DF273ADC04001C5D72 /* RegistrationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

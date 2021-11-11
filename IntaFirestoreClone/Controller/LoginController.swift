@@ -8,22 +8,31 @@ class LoginController: UIViewController {
     lazy var instaLogo = makeImageView()
     lazy var emailTextField = CustomTextField(placeholder: "Your e-mail", keyboardType: .emailAddress)
     lazy var passwordTextField = CustomTextField(placeholder: "Your password", isPassword: true, keyboardType: .default)
-    lazy var loginButton = makeLoginButton()
+    lazy var loginButton = makeCustomAuthButton(title: "Login In")
     lazy var inputStackView = makeInputStackView()
-    lazy var dontHaveAccountButton = makeDonthaveAccountLabelButton()
-    lazy var forgetPasswordButton = makeForgetPasswordLabelButton()
+    lazy var dontHaveAccountButton = makeTwoLabelsButton(normalText: "Don't have an account? ", boldText: "Sign Up", fontSize: 13)
+    lazy var forgetPasswordButton = makeTwoLabelsButton(normalText: "Forget your password?", boldText: "Get help signing in", fontSize: 13)
     
     //    MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configNavigationController()
+        setupButontargets()
         setupUI()
         setupConstraints()
     }
     
-    //    MARK: - Actions
+//    MARK: - Targets
     
+   func setupButontargets() {
+       dontHaveAccountButton.addTarget(self, action: #selector(handleShowSingUp), for: .touchUpInside)
+       forgetPasswordButton.addTarget(self, action: #selector(handleForgetPassword), for: .touchUpInside)
+       loginButton.addTarget(self, action: #selector(handleLoginButton), for: .touchUpInside)
+    }
+    
+    //    MARK: - Actions
+
     @objc func handleShowSingUp() {
         let controller = RegistrationController()
         navigationController?.pushViewController(controller, animated: true)
@@ -43,7 +52,6 @@ class LoginController: UIViewController {
         view.addSubview(instaLogo)
         view.addSubview(inputStackView)
         view.addSubview(dontHaveAccountButton)
-        
     }
     
     //    MARK: - Setup constraints
@@ -70,6 +78,7 @@ class LoginController: UIViewController {
     func configNavigationController() {
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.barStyle = .black
+        navigationItem.backButtonDisplayMode = .minimal
         
     }
     
@@ -91,27 +100,6 @@ class LoginController: UIViewController {
         image.image = UIImage(named: "Instagram_logo_white")
         
         return image
-    }
-     
-    private func makeLoginButton() -> CustomAuthButton {
-        let button = CustomAuthButton(title: "Login In")
-        button.addTarget(self, action: #selector(handleLoginButton), for: .touchUpInside)
-        
-        return button
-    }
-    
-    private func makeDonthaveAccountLabelButton() -> CustomTwoLabelButton {
-        let button = CustomTwoLabelButton(normalText: "Don't have an account? ", boldText: "Sign Up", fontSize: 13)
-        button.addTarget(self, action: #selector(handleShowSingUp), for: .touchUpInside)
-        
-        return button
-    }
-    
-    private func makeForgetPasswordLabelButton() -> CustomTwoLabelButton {
-        let button = CustomTwoLabelButton(normalText: "Forget your password?", boldText: "Get help signing in", fontSize: 13)
-        button.addTarget(self, action: #selector(handleForgetPassword), for: .touchUpInside)
-        
-        return button
     }
     
 }

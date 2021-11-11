@@ -3,7 +3,6 @@ import UIKit
 
 class RegistrationController: UIViewController {
     
-    
     //    MARK: - Properties
     
     lazy var userAvatarButton = makePhotoButton()
@@ -11,20 +10,28 @@ class RegistrationController: UIViewController {
     lazy var passwordTextField = CustomTextField(placeholder: "Your password", isPassword: true)
     lazy var fullNameTextField = CustomTextField(placeholder: "Your full name")
     lazy var usernameTextField = CustomTextField(placeholder: "Your username")
-    lazy var signUpButton = makeSignUpButton()
+    lazy var signUpButton = makeCustomAuthButton(title: "Login In")
     lazy var stackView = makeStackView()
-    lazy var alreadyAccountButton = makeLabelAlreadyAccountButton()
+    lazy var alreadyAccountButton = makeTwoLabelsButton(normalText: "Already have an account?", boldText: "Sign In", fontSize: 13)
     
     //    MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configNavigationController()
+        setupButtonTargets()
         setupUI()
         setupConstraints()
     }
     
+    //    MARK: - Targets
+    func setupButtonTargets() {
+        alreadyAccountButton.addTarget(self, action: #selector(handleAlreadyAccount), for: .touchUpInside)
+        signUpButton.addTarget(self, action: #selector(handleSignUpButton), for: .touchUpInside)
+    }
+    
     //    MARK: - Actions
+    
    @objc func handleSignUpButton() {
         debugPrint("Sign up button touched")
     }
@@ -32,7 +39,6 @@ class RegistrationController: UIViewController {
     @objc func handleAlreadyAccount() {
         navigationController?.popViewController(animated: true)
     }
-    
     
     //    MARK: - SetupUI
     
@@ -62,8 +68,10 @@ class RegistrationController: UIViewController {
     }
     
     //    MARK: - Helpers
+    
     private func configNavigationController() {
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+
     }
     
     //    MARK: - Makers
@@ -89,18 +97,5 @@ class RegistrationController: UIViewController {
         return button
     }
     
-    private func makeSignUpButton() -> CustomAuthButton {
-        let button = CustomAuthButton(title: "Sign In")
-        button.addTarget(self, action: #selector(handleSignUpButton), for: .touchUpInside)
-
-        return button
-    }
-    
-    private func makeLabelAlreadyAccountButton() -> CustomTwoLabelButton {
-        let button = CustomTwoLabelButton(normalText: "Already have an account? ", boldText: "Sign In")
-        button.addTarget(self, action: #selector(handleAlreadyAccount), for: .touchUpInside)
-        return button
-    }
-  
 }
 
