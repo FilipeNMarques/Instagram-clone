@@ -1,7 +1,8 @@
 import UIKit
 
 
-struct LoginViewModel {
+struct LoginViewModel: AuthenticationViewModelProtocol {
+    
     var email: String?
     var password: String?
     
@@ -9,7 +10,7 @@ struct LoginViewModel {
         return email?.isEmpty == false && password?.isEmpty == false
     }
     
-    var buttounBackgroundColor: UIColor {
+    var buttonBackgroundColor: UIColor {
         return formIsValid ? .systemPurple : .systemPurple.withAlphaComponent(0.4)
     }
     

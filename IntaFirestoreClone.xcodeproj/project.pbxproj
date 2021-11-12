@@ -22,6 +22,8 @@
 		B77F73A827348D9600400ECC /* MaintabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77F73A727348D9600400ECC /* MaintabController.swift */; };
 		B78A08F6273EB301000F4A8A /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A08F5273EB301000F4A8A /* RegistrationViewModel.swift */; };
 		B78A08F8273EB402000F4A8A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A08F7273EB402000F4A8A /* LoginViewModel.swift */; };
+		B78A08FB273EECF8000F4A8A /* AuthenticationViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A08FA273EECF8000F4A8A /* AuthenticationViewModelProtocol.swift */; };
+		B78A08FD273EEFB4000F4A8A /* FormProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A08FC273EEFB4000F4A8A /* FormProtocol.swift */; };
 		B7B627592735A5DE00BB0E1D /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B627582735A5DE00BB0E1D /* FeedController.swift */; };
 		B7B6275B2735A68000BB0E1D /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B6275A2735A68000BB0E1D /* SearchController.swift */; };
 		B7B6275D2735A68D00BB0E1D /* ImageSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B6275C2735A68D00BB0E1D /* ImageSelectorController.swift */; };
@@ -51,6 +53,8 @@
 		B77F73A727348D9600400ECC /* MaintabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintabController.swift; sourceTree = "<group>"; };
 		B78A08F5273EB301000F4A8A /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		B78A08F7273EB402000F4A8A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B78A08FA273EECF8000F4A8A /* AuthenticationViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModelProtocol.swift; sourceTree = "<group>"; };
+		B78A08FC273EEFB4000F4A8A /* FormProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormProtocol.swift; sourceTree = "<group>"; };
 		B7B627582735A5DE00BB0E1D /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
 		B7B6275A2735A68000BB0E1D /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		B7B6275C2735A68D00BB0E1D /* ImageSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectorController.swift; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 		B77F73A427348CFE00400ECC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B78A08F9273EEA0C000F4A8A /* Protocols */,
 				B78A08F7273EB402000F4A8A /* LoginViewModel.swift */,
 				B78A08F5273EB301000F4A8A /* RegistrationViewModel.swift */,
 			);
@@ -172,6 +177,15 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B78A08F9273EEA0C000F4A8A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B78A08FA273EECF8000F4A8A /* AuthenticationViewModelProtocol.swift */,
+				B78A08FC273EEFB4000F4A8A /* FormProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		B7D648DB273ADBD7001C5D72 /* Authentication */ = {
@@ -280,10 +294,12 @@
 				B7B627612735A6A200BB0E1D /* ProfileController.swift in Sources */,
 				B7B627592735A5DE00BB0E1D /* FeedController.swift in Sources */,
 				B71AABF0273C3B51009FDF0E /* UIView.swift in Sources */,
+				B78A08FD273EEFB4000F4A8A /* FormProtocol.swift in Sources */,
 				B77F73A827348D9600400ECC /* MaintabController.swift in Sources */,
 				B78A08F6273EB301000F4A8A /* RegistrationViewModel.swift in Sources */,
 				B73CD7A72735C71D00845682 /* Extensions.swift in Sources */,
 				B77F739027348CA400400ECC /* SceneDelegate.swift in Sources */,
+				B78A08FB273EECF8000F4A8A /* AuthenticationViewModelProtocol.swift in Sources */,
 				B7D648DF273ADC04001C5D72 /* RegistrationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
