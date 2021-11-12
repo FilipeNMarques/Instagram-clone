@@ -4,11 +4,13 @@ class LoginController: UIViewController {
 
 
     //    MARK: - Properties
+    
+    private var viewModel = LoginViewModel()
 
     lazy var instaLogo = makeImageView()
     lazy var emailTextField = CustomTextField(placeholder: "Your e-mail", keyboardType: .emailAddress)
     lazy var passwordTextField = CustomTextField(placeholder: "Your password", isPassword: true, keyboardType: .default)
-    lazy var loginButton = makeCustomAuthButton(title: "Login In")
+    lazy var loginButton = makeCustomAuthButton(title: "Login In", titleColor: viewModel.buttonTitleColor, backgroundColor: viewModel.buttounBackgroundColor)
     lazy var inputStackView = makeInputStackView()
     lazy var dontHaveAccountButton = makeTwoLabelsButton(normalText: "Don't have an account? ", boldText: "Sign Up", fontSize: 13)
     lazy var forgetPasswordButton = makeTwoLabelsButton(normalText: "Forget your password?", boldText: "Get help signing in", fontSize: 13)
@@ -17,6 +19,7 @@ class LoginController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configNotificationObservers()
         configNavigationController()
         setupButontargets()
         setupUI()
@@ -44,6 +47,22 @@ class LoginController: UIViewController {
     
     @objc func handleForgetPassword() {
         debugPrint("Forget password button pressed")
+    }
+    
+    @objc func textDidChange(sender: UITextField) {
+        if sender == emailTextField {
+            viewModel.email = sender.text
+        }
+        if sender == passwordTextField {
+            viewModel.password = sender.text
+        }
+        
+        if viewModel.formIsValid {
+            loginButton.isEnabled = true
+            loginButton.backgroundColor = .systemPurple
+        }
+        
+        loginButton.isEnabled = viewModel.formIsValid
     }
     
     //    MARK: - SetupUI
@@ -80,6 +99,11 @@ class LoginController: UIViewController {
         navigationController?.navigationBar.barStyle = .black
         navigationItem.backButtonDisplayMode = .minimal
         
+    }
+    
+    func configNotificationObservers() {
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     }
     
     //    MARK: - Makers

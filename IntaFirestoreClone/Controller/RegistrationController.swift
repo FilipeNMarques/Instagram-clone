@@ -10,7 +10,7 @@ class RegistrationController: UIViewController {
     lazy var passwordTextField = CustomTextField(placeholder: "Your password", isPassword: true)
     lazy var fullNameTextField = CustomTextField(placeholder: "Your full name")
     lazy var usernameTextField = CustomTextField(placeholder: "Your username")
-    lazy var signUpButton = makeCustomAuthButton(title: "Login In")
+    lazy var signUpButton = makeCustomAuthButton(title: "Sign Up")
     lazy var stackView = makeStackView()
     lazy var alreadyAccountButton = makeTwoLabelsButton(normalText: "Already have an account?", boldText: "Sign In", fontSize: 13)
     
