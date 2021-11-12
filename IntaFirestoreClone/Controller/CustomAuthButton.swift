@@ -1,6 +1,6 @@
 import UIKit
 
-public func  makeCustomAuthButton(title: String, titleColor: UIColor = .white, backgroundColor: UIColor = .systemPurple) -> UIButton {
+public func  makeCustomAuthButton(title: String, titleColor: UIColor = .white.withAlphaComponent(0.67), backgroundColor: UIColor = .systemPurple.withAlphaComponent(0.4)) -> UIButton {
     let button = UIButton(type: .system)
     button.translatesAutoresizingMaskIntoConstraints = false
     button.setHeight(45)

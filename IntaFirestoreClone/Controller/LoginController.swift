@@ -10,7 +10,7 @@ class LoginController: UIViewController {
     lazy var instaLogo = makeImageView()
     lazy var emailTextField = CustomTextField(placeholder: "Your e-mail", keyboardType: .emailAddress)
     lazy var passwordTextField = CustomTextField(placeholder: "Your password", isPassword: true, keyboardType: .default)
-    lazy var loginButton = makeCustomAuthButton(title: "Login In", titleColor: viewModel.buttonTitleColor, backgroundColor: viewModel.buttonBackgroundColor)
+    lazy var loginButton = makeCustomAuthButton(title: "Login In")
     lazy var inputStackView = makeInputStackView()
     lazy var dontHaveAccountButton = makeTwoLabelsButton(normalText: "Don't have an account? ", boldText: "Sign Up", fontSize: 13)
     lazy var forgetPasswordButton = makeTwoLabelsButton(normalText: "Forget your password?", boldText: "Get help signing in", fontSize: 13)
@@ -56,13 +56,7 @@ class LoginController: UIViewController {
         if sender == passwordTextField {
             viewModel.password = sender.text
         }
-        
-        if viewModel.formIsValid {
-            loginButton.isEnabled = true
-            loginButton.backgroundColor = .systemPurple
-        }
-        
-        loginButton.isEnabled = viewModel.formIsValid
+        updateForm()
     }
     
     //    MARK: - SetupUI
@@ -126,4 +120,15 @@ class LoginController: UIViewController {
         return image
     }
     
+}
+
+
+// MARK: - FormViewModel
+
+extension LoginController: FormViewModelProtocol {
+    func updateForm() {
+       loginButton.backgroundColor = viewModel.buttonBackgroundColor
+       loginButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
+       loginButton.isEnabled = viewModel.formIsValid
+    }
 }
