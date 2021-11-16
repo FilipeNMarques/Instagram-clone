@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AAB24561A9EABF6CA0888B1F /* Pods_IntaFirestoreClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 157800377D90BB2E52A39C86 /* Pods_IntaFirestoreClone.framework */; };
 		B71AABED273C332C009FDF0E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71AABEC273C332C009FDF0E /* CustomTextField.swift */; };
 		B71AABF0273C3B51009FDF0E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71AABEF273C3B51009FDF0E /* UIView.swift */; };
 		B71AABF2273C3B7A009FDF0E /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71AABF1273C3B7A009FDF0E /* UIButton.swift */; };
 		B71AABF4273C40D4009FDF0E /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71AABF3273C40D4009FDF0E /* UIViewController.swift */; };
 		B73CD7A52735C5E200845682 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73CD7A42735C5E200845682 /* FeedCell.swift */; };
 		B73CD7A72735C71D00845682 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73CD7A62735C71D00845682 /* Extensions.swift */; };
+		B762975827441BEC00B8FE34 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B762975727441BEC00B8FE34 /* GoogleService-Info.plist */; };
+		B762975A274447AC00B8FE34 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7629759274447AC00B8FE34 /* ImageUploader.swift */; };
+		B762975C274447B800B8FE34 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762975B274447B800B8FE34 /* AuthService.swift */; };
 		B77F738E27348CA400400ECC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77F738D27348CA400400ECC /* AppDelegate.swift */; };
 		B77F739027348CA400400ECC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77F738F27348CA400400ECC /* SceneDelegate.swift */; };
 		B77F739227348CA400400ECC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77F739127348CA400400ECC /* ViewController.swift */; };
@@ -36,12 +40,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		157800377D90BB2E52A39C86 /* Pods_IntaFirestoreClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntaFirestoreClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A1676E8C76212548D87C87A /* Pods-IntaFirestoreClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntaFirestoreClone.release.xcconfig"; path = "Target Support Files/Pods-IntaFirestoreClone/Pods-IntaFirestoreClone.release.xcconfig"; sourceTree = "<group>"; };
+		923A36AB23BD4FFEB590F8BB /* Pods-IntaFirestoreClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntaFirestoreClone.debug.xcconfig"; path = "Target Support Files/Pods-IntaFirestoreClone/Pods-IntaFirestoreClone.debug.xcconfig"; sourceTree = "<group>"; };
 		B71AABEC273C332C009FDF0E /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		B71AABEF273C3B51009FDF0E /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		B71AABF1273C3B7A009FDF0E /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		B71AABF3273C40D4009FDF0E /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		B73CD7A42735C5E200845682 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		B73CD7A62735C71D00845682 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B762975727441BEC00B8FE34 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B7629759274447AC00B8FE34 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		B762975B274447B800B8FE34 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		B77F738A27348CA400400ECC /* IntaFirestoreClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntaFirestoreClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B77F738D27348CA400400ECC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B77F738F27348CA400400ECC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,12 +81,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAB24561A9EABF6CA0888B1F /* Pods_IntaFirestoreClone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3208FC6EFE46D67728E7E211 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				923A36AB23BD4FFEB590F8BB /* Pods-IntaFirestoreClone.debug.xcconfig */,
+				7A1676E8C76212548D87C87A /* Pods-IntaFirestoreClone.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4D83092382BCF5CB835BA5FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				157800377D90BB2E52A39C86 /* Pods_IntaFirestoreClone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B71AABEE273C3B31009FDF0E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +120,8 @@
 			children = (
 				B77F738C27348CA400400ECC /* IntaFirestoreClone */,
 				B77F738B27348CA400400ECC /* Products */,
+				3208FC6EFE46D67728E7E211 /* Pods */,
+				4D83092382BCF5CB835BA5FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +150,7 @@
 				B77F739627348CA600400ECC /* Assets.xcassets */,
 				B77F739827348CA600400ECC /* LaunchScreen.storyboard */,
 				B77F739B27348CA600400ECC /* Info.plist */,
+				B762975727441BEC00B8FE34 /* GoogleService-Info.plist */,
 			);
 			path = IntaFirestoreClone;
 			sourceTree = "<group>";
@@ -135,6 +166,8 @@
 		B77F73A227348CF900400ECC /* API */ = {
 			isa = PBXGroup;
 			children = (
+				B7629759274447AC00B8FE34 /* ImageUploader.swift */,
+				B762975B274447B800B8FE34 /* AuthService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -214,9 +247,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B77F739E27348CA600400ECC /* Build configuration list for PBXNativeTarget "IntaFirestoreClone" */;
 			buildPhases = (
+				98C2AAC4D8391F4286A5D106 /* [CP] Check Pods Manifest.lock */,
 				B77F738627348CA400400ECC /* Sources */,
 				B77F738727348CA400400ECC /* Frameworks */,
 				B77F738827348CA400400ECC /* Resources */,
+				B74F3C30E14827E8C243C146 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -266,12 +301,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				B77F739A27348CA600400ECC /* LaunchScreen.storyboard in Resources */,
+				B762975827441BEC00B8FE34 /* GoogleService-Info.plist in Resources */,
 				B77F739727348CA600400ECC /* Assets.xcassets in Resources */,
 				B77F739527348CA400400ECC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		98C2AAC4D8391F4286A5D106 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IntaFirestoreClone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B74F3C30E14827E8C243C146 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IntaFirestoreClone/Pods-IntaFirestoreClone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IntaFirestoreClone/Pods-IntaFirestoreClone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IntaFirestoreClone/Pods-IntaFirestoreClone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B77F738627348CA400400ECC /* Sources */ = {
@@ -283,7 +361,9 @@
 				B78A08F8273EB402000F4A8A /* LoginViewModel.swift in Sources */,
 				B7FA4529273DB27500F2FA21 /* CustomTwoLabelsButton.swift in Sources */,
 				B7D648DD273ADBFB001C5D72 /* LoginController.swift in Sources */,
+				B762975A274447AC00B8FE34 /* ImageUploader.swift in Sources */,
 				B71AABF2273C3B7A009FDF0E /* UIButton.swift in Sources */,
+				B762975C274447B800B8FE34 /* AuthService.swift in Sources */,
 				B73CD7A52735C5E200845682 /* FeedCell.swift in Sources */,
 				B7FA452B273DB97D00F2FA21 /* CustomAuthButton.swift in Sources */,
 				B7B6275D2735A68D00BB0E1D /* ImageSelectorController.swift in Sources */,
@@ -444,6 +524,7 @@
 		};
 		B77F739F27348CA600400ECC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 923A36AB23BD4FFEB590F8BB /* Pods-IntaFirestoreClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -472,6 +553,7 @@
 		};
 		B77F73A027348CA600400ECC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A1676E8C76212548D87C87A /* Pods-IntaFirestoreClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
