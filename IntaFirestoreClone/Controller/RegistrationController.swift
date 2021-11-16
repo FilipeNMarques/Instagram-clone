@@ -5,7 +5,8 @@ class RegistrationController: UIViewController {
     
     //    MARK: - Properties
     
-    var viewModel = RegistrationViewModel()
+    private var viewModel = RegistrationViewModel()
+    private var profileImage: UIImage?
     
     lazy var userAvatarButton = makePhotoButton()
     lazy var emailTextField = CustomTextField(placeholder: "Your e-mail", keyboardType: .emailAddress)
@@ -30,13 +31,23 @@ class RegistrationController: UIViewController {
     //    MARK: - Targets
     func setupButtonTargets() {
         alreadyAccountButton.addTarget(self, action: #selector(handleAlreadyAccount), for: .touchUpInside)
+        
         signUpButton.addTarget(self, action: #selector(handleSignUpButton), for: .touchUpInside)
     }
     
     //    MARK: - Actions
     
     @objc func handleSignUpButton() {
-        debugPrint("Sign up button touched")
+        
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        guard let fullName = fullNameTextField.text else { return }
+        guard let username = usernameTextField.text else { return }
+        guard let profileImage = self.profileImage else { return }
+        
+        let credentials = AuthCredentials(email: email, password: password, fullName: fullName, userName: username, profileImage: profileImage)
+        
+        AuthService.registerUser(withCredential: credentials)
     }
     
     @objc func handleAlreadyAccount() {
@@ -68,6 +79,8 @@ class RegistrationController: UIViewController {
         
         present(picker, animated: true, completion: nil)
     }
+    
+    
     
     //    MARK: - SetupUI
     
@@ -150,6 +163,7 @@ extension RegistrationController: UIImagePickerControllerDelegate, UINavigationC
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         guard let selectedImage = info[.editedImage] as? UIImage else { return }
+        profileImage = selectedImage
         
         userAvatarButton.layer.cornerRadius = userAvatarButton.frame.width / 2
         userAvatarButton.layer.masksToBounds = true
